@@ -1,36 +1,29 @@
-export const meta = () => {
-  return [{ title: "New Remix App" }];
-};
+import { Link } from '@remix-run/react'
 
-export default function Index() {
+export const meta = () => {
+  return [{ title: 'Blog testing' }]
+}
+
+export default function Index () {
   return (
-    <div style={{ fontFamily: "system-ui, sans-serif", lineHeight: "1.4" }}>
-      <h1>Welcome to Remix</h1>
+    <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
+      <h1>Blog testing with Remix and Vercel</h1>
       <ul>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/blog"
-            rel="noreferrer"
-          >
-            15m Quickstart Blog Tutorial
-          </a>
+          <Link to='about'>Sobre Mí</Link>
         </li>
         <li>
-          <a
-            target="_blank"
-            href="https://remix.run/tutorials/jokes"
-            rel="noreferrer"
-          >
-            Deep Dive Jokes App Tutorial
-          </a>
-        </li>
-        <li>
-          <a target="_blank" href="https://remix.run/docs" rel="noreferrer">
-            Remix Docs
-          </a>
+          <Link to='blog'>Blog</Link>
+          <ul>
+            <li>
+              <Link to='blog/first'>Primer post</Link>
+            </li>
+            <li>
+              <Link to='blog/second'>Second post</Link>
+            </li>
+          </ul>
         </li>
       </ul>
     </div>
-  );
+  )
 }
