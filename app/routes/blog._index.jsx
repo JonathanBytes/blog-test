@@ -1,3 +1,7 @@
+export const meta = () => {
+  return [{ title: 'Blog posts' }]
+}
+
 export default function Posts () {
   return (
     <main>
