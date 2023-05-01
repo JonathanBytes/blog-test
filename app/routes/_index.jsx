@@ -21,6 +21,9 @@ export default function Index () {
             <li>
               <Link to='blog/second'>Second post</Link>
             </li>
+            <li>
+              <Link to='blog/third'>Third post</Link>
+            </li>
           </ul>
         </li>
       </ul>
