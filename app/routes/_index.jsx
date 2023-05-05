@@ -20,7 +20,7 @@ export default function Index () {
       <h1>Blog testing with Remix and Vercel</h1>
       <ul>
         <li>
-          <Link to='about'>Sobre Mí</Link>
+          <Link to='about'>Sobre mí</Link>
         </li>
         <li>
           <Link to='blog'>Blog</Link>
