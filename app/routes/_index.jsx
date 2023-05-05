@@ -4,6 +4,16 @@ export const meta = () => {
   return [{ title: 'Blog testing' }]
 }
 
+export const links = () => {
+  return [
+    {
+      rel: 'stylesheet',
+      href: 'https://cdn.jsdelivr.net/npm/water.css@2/out/water.css'
+      // href: 'https://cdn.jsdelivr.net/npm/@exampledev/new.css@1/new.min.css'
+    }
+  ]
+}
+
 export default function Index () {
   return (
     <div style={{ fontFamily: 'system-ui, sans-serif', lineHeight: '1.4' }}>
@@ -14,17 +24,6 @@ export default function Index () {
         </li>
         <li>
           <Link to='blog'>Blog</Link>
-          <ul>
-            <li>
-              <Link to='blog/first'>Primer post</Link>
-            </li>
-            <li>
-              <Link to='blog/second'>Second post</Link>
-            </li>
-            <li>
-              <Link to='blog/third'>Third post</Link>
-            </li>
-          </ul>
         </li>
       </ul>
     </div>

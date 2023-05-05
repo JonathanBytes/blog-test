@@ -9,3 +9,10 @@
 # Sobre mí
 
 Esto es una breve descripción sobre mí.
+
+```css
+    .header {
+        background-color: pink
+    }
+```
+

@@ -23,7 +23,7 @@ export default function App () {
   return (
       <>
         <Outlet />
-        <Link to="/">Volver</Link>
+        <Link to="/blog">Volver</Link>
       </>
   )
 }
