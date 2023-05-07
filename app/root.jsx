@@ -7,7 +7,7 @@ import {
   ScrollRestoration
 } from '@remix-run/react'
 
-import styles from '~/styles/style.css'
+// import styles from '~/styles/style.css'
 import highlight from 'highlight.js/styles/base16/gruvbox-dark-soft.css'
 
 export const links = () => {

@@ -1,7 +1,10 @@
 import { Link } from '@remix-run/react'
 
 export const meta = () => {
-  return [{ title: 'Blog testing' }]
+  return [
+    { title: 'Blog testing' },
+    { description: 'Blog for testing Remix technology with mdx posts and React components' }
+  ]
 }
 
 export const links = () => {
