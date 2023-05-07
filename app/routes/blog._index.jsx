@@ -8,9 +8,16 @@ import * as postA from './post.first.mdx'
 import * as postB from './post.second.mdx'
 import * as postC from './post.third.mdx'
 
+export const meta = () => {
+  return [
+    { title: 'Blog posts' },
+    { description: 'Landing page for JonathanBytes blog' }
+  ]
+}
+
 function postFromModule (mod) {
   return {
-    slug: mod.filename.replace(/\.mdx?$/, ''),
+    slug: mod.filename.replace(/\.mdx?$/, '').replace('.', '/').replace('post', '/post'),
     ...mod.attributes.meta
   }
 }
@@ -28,21 +35,24 @@ export async function loader () {
 }
 
 export default function BlogIndex () {
-  const posts = useLoaderData<typeof loader>()
+  const posts = useLoaderData()
 
   return (
+    <main>
+    <h1>Post del blog</h1>
     <ul>
       {posts.map((post) => (
         <li key={post.slug}>
-          <Link to={post.slug}>{post.title}</Link>
-          {post.description
+          <Link to={post.slug}>{post[0].title}</Link>
+          {post[1].description
             ? (
-            <p>{post.description}</p>
+            <p>{post[1].description}</p>
               )
             : null}
         </li>
       ))}
     </ul>
+    </main>
   )
 }
 
